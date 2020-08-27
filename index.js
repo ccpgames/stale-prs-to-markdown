@@ -2,6 +2,8 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 const showdown = require('showdown');
 
+showdown.setFlavor('github');
+
 try {
   const markdownText = core.getInput('text');
   const converter = new showdown.Converter();
