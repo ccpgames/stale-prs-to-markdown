@@ -6,7 +6,7 @@ showdown.setFlavor('github');
 
 try {
   const markdownText = core.getInput('text');
-  let re = /<details>[\s\S]*?<\/details>/
+  let re = /<details>[\s\S]*?<\/details>/g;
   const converter = new showdown.Converter();
   const html = converter.makeHtml(markdownText.replace(re, ""));
 
