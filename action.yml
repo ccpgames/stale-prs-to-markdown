@@ -11,6 +11,8 @@ inputs:
 outputs:
   markdown:
     description: 'Markdown output'
+  anymarked:
+    description: 'Whether any new PRs were marked as stale this run'
 runs:
   using: 'node12'
   main: 'index.js'

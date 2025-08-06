@@ -14,9 +14,13 @@ This action converts stale PRs output to markdown
 
 The Markdown result
 
+### `anymarked`
+
+Whether any new old PRs were marked
+
 ## Example usage
 ```
 uses: ccpgames/stale-prs-to-markdown@v1.1  
 with:  
-  text: ${{ steps.stale.outputs.staled-issues-prs }}
+  staleoutput: ${{ steps.stale.outputs.staled-issues-prs }}
 ```
