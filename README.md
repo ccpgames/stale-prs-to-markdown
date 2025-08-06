@@ -1,21 +1,22 @@
-# Markdown to HTML action
+# Stale PRs to Markdown action
 
-This action prints converts a Markdown input to an HTML
+This action converts stale PRs output to markdown
 
 ## Inputs
 
-### `text`
+### `staleoutput`
 
-**Required** The markdown text you want to convert
+**Required** The output from stale
 
 ## Outputs
 
-### `html`
+### `markdown`
 
-The HTML result
+The Markdown result
 
 ## Example usage
-
-uses: lifepal/markdown-to-html@v1.1
-with:
-  text: 'Hello there'
+```
+uses: ccpgames/stale-prs-to-markdown@v1.1  
+with:  
+  text: ${{ steps.stale.outputs.staled-issues-prs }}
+```

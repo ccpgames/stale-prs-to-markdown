@@ -1,16 +1,16 @@
-name: 'Markdown to HTML'
-description: 'Takes a Markdown input and gives an HTML output'
+name: 'Stale PRs to markdown'
+description: 'Takes a stale PRs output and returns a markdown output'
 branding:
   icon: 'arrow-right'
-  color: 'blue'
+  color: 'green'
 inputs:
-  text:
-    description: 'Markdown text'
+  staleoutput:
+    description: 'Output from stale action'
     required: true
     default: ''
 outputs:
-  html:
-    description: 'HTML output'
+  markdown:
+    description: 'Markdown output'
 runs:
   using: 'node12'
   main: 'index.js'
