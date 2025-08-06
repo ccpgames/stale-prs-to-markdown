@@ -4,7 +4,7 @@ const github = require('@actions/github');
 try {
   const staleoutput = JSON.parse(core.getInput('staleoutput'));
   let anyMarked = false;
-  let markdown = "Old PR in repo " + github.context.repo + ":\n" 
+  let markdown = "Old PR in repo " + github.context.repo.repo + ":\n" 
   
   for(var item of staleoutput) {
     if(!item.markedStaleThisRun) continue;
